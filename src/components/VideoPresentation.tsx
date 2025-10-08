@@ -181,11 +181,13 @@ export const VideoPresentation = () => {
                   style={{ animationDelay: `${idx * 0.15}s` }}
                 >
                   <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden shadow-glow-blue transition-transform duration-300 group-hover:scale-110 group-hover:shadow-glow-pink">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover object-center"
-                    />
+                    {currentSection === 2 && (
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    )}
                     <div className="absolute inset-0 rounded-full border-4 border-primary/30 animate-pulse-glow" />
                   </div>
                   <p className="text-xl font-semibold text-foreground">{member.name}</p>

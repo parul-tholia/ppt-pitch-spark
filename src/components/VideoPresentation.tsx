@@ -5,6 +5,9 @@ import heroImage from '@/assets/hero-tech.jpg';
 import problemImage from '@/assets/problem-visual.jpg';
 import solutionImage from '@/assets/solution-agents.jpg';
 import impactImage from '@/assets/impact-visual.jpg';
+import ahishaImage from '@/assets/team-ahisha.jpeg';
+import faizaImage from '@/assets/team-faiza.jpeg';
+import parulImage from '@/assets/team-parul.jpg';
 
 const TOTAL_DURATION = 20000; // 20 seconds
 const SECTIONS = [
@@ -165,17 +168,26 @@ export const VideoPresentation = () => {
               Meet Our Team
             </h2>
             <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {['Developer 1', 'Developer 2', 'Developer 3', 'Developer 4'].map((name, idx) => (
+              {[
+                { name: 'Ahisha', image: ahishaImage },
+                { name: 'Tanu', image: ahishaImage },
+                { name: 'Faiza', image: faizaImage },
+                { name: 'Parul', image: parulImage }
+              ].map((member, idx) => (
                 <div
                   key={idx}
                   className="space-y-4 animate-slide-in group cursor-pointer"
                   style={{ animationDelay: `${idx * 0.15}s` }}
                 >
-                  <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-tech shadow-glow-blue flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:shadow-glow-pink">
-                    <span className="text-5xl font-bold text-background">{idx + 1}</span>
+                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden shadow-glow-blue transition-transform duration-300 group-hover:scale-110 group-hover:shadow-glow-pink">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center"
+                    />
                     <div className="absolute inset-0 rounded-full border-4 border-primary/30 animate-pulse-glow" />
                   </div>
-                  <p className="text-xl font-semibold text-foreground">{name}</p>
+                  <p className="text-xl font-semibold text-foreground">{member.name}</p>
                   <p className="text-sm text-muted-foreground">Team Member</p>
                 </div>
               ))}

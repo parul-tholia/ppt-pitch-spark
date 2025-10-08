@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Play, Sparkles, Zap, Shield, TrendingUp, Users } from 'lucide-react';
+import { Play, Sparkles, Zap, Shield, TrendingUp, Users, Network, FileX, AlertTriangle, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-tech.jpg';
 import problemImage from '@/assets/problem-visual.jpg';
@@ -117,46 +117,31 @@ export const VideoPresentation = () => {
 
         {/* Problem Section */}
         {currentSection === 1 && (
-          <div className="animate-slide-in max-w-6xl grid grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-5xl font-bold text-primary flex items-center gap-3">
-                <Zap className="w-10 h-10" />
-                The Problem
-              </h2>
-              <div className="space-y-4 text-xl text-muted-foreground">
-                <p className="text-secondary text-2xl font-semibold animate-fade-in">
-                  Modern software projects are complex with sprawling dependencies and hidden risks.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3 animate-slide-in" style={{ animationDelay: '0.1s' }}>
-                    <span className="text-primary text-2xl">•</span>
-                    <span>Understanding repo architecture quickly</span>
-                  </li>
-                  <li className="flex items-start gap-3 animate-slide-in" style={{ animationDelay: '0.2s' }}>
-                    <span className="text-secondary text-2xl">•</span>
-                    <span>Identifying dead or useless code</span>
-                  </li>
-                  <li className="flex items-start gap-3 animate-slide-in" style={{ animationDelay: '0.3s' }}>
-                    <span className="text-accent text-2xl">•</span>
-                    <span>Predicting risks before failures</span>
-                  </li>
-                  <li className="flex items-start gap-3 animate-slide-in" style={{ animationDelay: '0.4s' }}>
-                    <span className="text-primary text-2xl">•</span>
-                    <span>Getting quick answers about repo health</span>
-                  </li>
-                </ul>
-                <p className="text-accent font-medium text-2xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                  ⚠️ Existing tools are fragmented, manual, and lack intelligence.
-                </p>
+          <div className="animate-fade-in text-center space-y-10 max-w-6xl">
+            <h2 className="text-6xl font-bold text-primary flex items-center justify-center gap-4">
+              <Zap className="w-12 h-12" />
+              The Problem
+            </h2>
+            <p className="text-2xl text-secondary font-semibold animate-fade-in">
+              Complex repos with hidden risks and fragmented tools
+            </p>
+            <div className="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-glow-blue animate-slide-in group cursor-pointer">
+                <Network className="text-primary w-12 h-12 mb-4 mx-auto transition-transform duration-300 group-hover:rotate-12" />
+                <h3 className="text-xl font-bold text-primary">Complex Architecture</h3>
               </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-vibrant opacity-20 rounded-3xl blur-xl animate-pulse-glow" />
-              <img
-                src={problemImage}
-                alt="Problem visualization"
-                className="relative w-full h-auto rounded-2xl shadow-glow-pink animate-float"
-              />
+              <div className="p-8 rounded-2xl bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 transition-all duration-300 hover:scale-105 hover:shadow-glow-pink animate-slide-in group cursor-pointer" style={{ animationDelay: '0.1s' }}>
+                <FileX className="text-secondary w-12 h-12 mb-4 mx-auto transition-transform duration-300 group-hover:scale-110" />
+                <h3 className="text-xl font-bold text-secondary">Dead Code</h3>
+              </div>
+              <div className="p-8 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 transition-all duration-300 hover:scale-105 hover:shadow-glow-orange animate-slide-in group cursor-pointer" style={{ animationDelay: '0.2s' }}>
+                <AlertTriangle className="text-accent w-12 h-12 mb-4 mx-auto transition-transform duration-300 group-hover:rotate-[-12deg]" />
+                <h3 className="text-xl font-bold text-accent">Hidden Risks</h3>
+              </div>
+              <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-glow-blue animate-slide-in group cursor-pointer" style={{ animationDelay: '0.3s' }}>
+                <HelpCircle className="text-primary w-12 h-12 mb-4 mx-auto transition-transform duration-300 group-hover:scale-110" />
+                <h3 className="text-xl font-bold text-primary">No Quick Answers</h3>
+              </div>
             </div>
           </div>
         )}

@@ -6,8 +6,9 @@ import problemImage from '@/assets/problem-visual.jpg';
 import solutionImage from '@/assets/solution-agents.jpg';
 import impactImage from '@/assets/impact-visual.jpg';
 import ahishaImage from '@/assets/team-ahisha.jpeg';
+import tanuImage from '@/assets/team-tanu-original.png';
 import faizaImage from '@/assets/team-faiza.jpeg';
-import parulImage from '@/assets/team-parul.jpg';
+import parulImage from '@/assets/team-parul-cropped.jpg';
 
 const TOTAL_DURATION = 20000; // 20 seconds
 const SECTIONS = [
@@ -170,7 +171,7 @@ export const VideoPresentation = () => {
             <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto">
               {[
                 { name: 'Ahisha', image: ahishaImage },
-                { name: 'Tanu', image: ahishaImage },
+                { name: 'Tanu', image: tanuImage },
                 { name: 'Faiza', image: faizaImage },
                 { name: 'Parul', image: parulImage }
               ].map((member, idx) => (

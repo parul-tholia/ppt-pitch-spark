@@ -286,7 +286,7 @@ export const VideoPresentation = () => {
               <img
                 src={impactImage}
                 alt="Impact visualization"
-                className="relative w-full max-w-2xl mx-auto h-64 object-cover rounded-2xl shadow-glow-blue"
+                className="relative w-full max-w-2xl mx-auto h-40 object-cover rounded-2xl shadow-glow-blue"
               />
             </div>
           </div>
